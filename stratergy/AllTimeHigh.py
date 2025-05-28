@@ -7,7 +7,7 @@ from stratergy.Index import fetch_nifty50_list
 
 
 # Define a function to get historical data and check for new all-time highs
-def check_new_all_time_high(ticker, period='6y'):
+def check_new_all_time_high(ticker, period='7y'):
     # Fetch historical market data
     data = yf.download(ticker, period=period, interval='1mo' , progress=False)
 
