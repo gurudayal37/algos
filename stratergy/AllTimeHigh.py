@@ -1,9 +1,7 @@
 import yfinance as yf
-import pandas as pd
-from datetime import datetime, timedelta
 
 from Index import fetch_nifty500_list
-from stratergy.Index import fetch_nifty50_list
+from stratergy.Sectors import sector_mapping
 
 
 # Define a function to get historical data and check for new all-time highs
@@ -38,21 +36,28 @@ def main():
 
     # Store stocks that have broken their all-time high
     new_highs = []
+    groupByTickers = {}
 
     # Check each stock in the list
     for ticker in nifty500_tickers:
         try:
             is_new_high, high_date = check_new_all_time_high(ticker)
             if is_new_high:
-                print(f"********************! {ticker} has hit a new all-time high on {high_date} !********************")
+                sector = sector_mapping.get(ticker, "Unknown")
+                if sector not in groupByTickers:
+                    groupByTickers[sector] = []
+                groupByTickers[sector].append((ticker, high_date))
+                print(f"********************! {ticker} has hit a new all-time high on {high_date} | sector {sector} !********************")
                 new_highs.append((ticker, high_date))
         except Exception as e:
             print(f"Error processing {ticker}: {str(e)}")
 
-    # Output all stocks that have hit new highs
-    print("Stocks hitting new all-time highs:")
-    for ticker, high_date in new_highs:
-        print(f"{ticker}: {high_date}")
+    # Output all stocks that have hit new highs, grouped by sector
+    print("Stocks hitting new all-time highs grouped by sector:")
+    for sector, tickers in groupByTickers.items():
+        print(f"Sector: {sector}")
+        for ticker, high_date in tickers:
+            print(f"  {ticker}: {high_date}")
 
 
 if __name__ == "__main__":
