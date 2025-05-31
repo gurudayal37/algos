@@ -1,0 +1,12 @@
+# Ignore everything
+*
+
+# Except the stratergy directory
+!stratergy/
+!stratergy/**
+
+# But ignore these specific files/directories
+.DS_Store
+.venv/
+__pycache__/
+*.pyc 
