@@ -1,0 +1,71 @@
+import yfinance as yf
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Parameters
+symbol = "RELIANCE.NS"
+start_date = "2024-01-01"
+end_date = "2025-01-01"
+risk_free_rate = 0.06
+days_to_expiry = 30
+lot_size = 250  # Adjust for your stock
+entry_threshold = 5  # Arbitrage entry
+exit_threshold = 1   # Arbitrage exit
+
+# Download spot data
+spot_data = yf.download(symbol, start=start_date, end=end_date)
+spot_data = spot_data[['Close']].rename(columns={'Close': 'spot_price'})
+
+# Simulate futures price
+t = days_to_expiry / 365
+spot_data['futures_price'] = spot_data['spot_price'] * np.exp(risk_free_rate * t)
+spot_data['spread'] = spot_data['futures_price'] - spot_data['spot_price']
+
+# Backtesting logic
+position = False
+buy_price_stock = 0
+sell_price_futures = 0
+pnl_list = []
+
+for i in range(len(spot_data)):
+    row = spot_data.iloc[i]
+    spread = row['spread']
+
+    if not position and spread > entry_threshold:
+        # Enter arbitrage
+        position = True
+        buy_price_stock = row['spot_price']
+        sell_price_futures = row['futures_price']
+        entry_date = spot_data.index[i]
+
+    elif position and spread < exit_threshold:
+        # Exit arbitrage
+        position = False
+        sell_price_stock = row['spot_price']
+        buy_price_futures = row['futures_price']
+
+        pnl_stock = (sell_price_stock - buy_price_stock) * lot_size
+        pnl_futures = (sell_price_futures - buy_price_futures) * lot_size * -1  # short position
+        total_pnl = pnl_stock + pnl_futures
+
+        pnl_list.append({
+            'entry_date': entry_date,
+            'exit_date': spot_data.index[i],
+            'pnl': total_pnl
+        })
+
+# Results
+pnl_df = pd.DataFrame(pnl_list)
+print("Total Trades:", len(pnl_df))
+print("Total PnL:", pnl_df['pnl'].sum())
+print(pnl_df)
+
+# Plot cumulative PnL
+pnl_df['cumulative_pnl'] = pnl_df['pnl'].cumsum()
+pnl_df.set_index('exit_date', inplace=True)
+pnl_df['cumulative_pnl'].plot(title="Cumulative PnL from Arbitrage Strategy", figsize=(10,5))
+plt.xlabel("Exit Date")
+plt.ylabel("Cumulative PnL (INR)")
+plt.grid()
+plt.show()

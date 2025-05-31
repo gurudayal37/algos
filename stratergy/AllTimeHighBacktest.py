@@ -5,7 +5,7 @@ import pandas as pd
 from datetime import datetime, timedelta
 
 from Index import fetch_nifty500_list
-from stratergy.Index import fetch_nifty50_list
+from Index import fetch_nifty50_list
 
 @lru_cache(maxsize=64)
 def get_data(ticker):
