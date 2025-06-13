@@ -29,120 +29,566 @@ sectors = [
 ]
 
 nifty_500_symbols.extend([
-    "BALAJIPHOS.NS", "FAZE3Q.NS", "ASTRAMICRO.NS", "PURPLEUTED.NS",
-    "MANGCHEFER.NS", "PARADEEP.NS", "DRL.NS", "ZENTEC.NS", "SECMARK.NS",
-    "KITEX.NS", "ABHIINT.NS", "CPSSHAPER.NS", "INDIAGLYCO.NS", "SHANTIOVERS.NS",
-    "COFFEEDAY.NS", "LLOYDSLUX.NS", "CENTUM.NS", "ASHIMA.NS", "UTTAMSUGAR.NS",
-    "SHEETALUNI.NS", "PRIVISCL.NS", "FORCEMOT.NS", "VASULOG.NS", "ELINEL.NS",
-    "SPORTKING.NS", "NUCLEUS.NS", "ASAHISONG.NS", "JINDALPHOT.NS", "ANURAS.NS",
-    "HITACHIEN.NS", "ECOSMOB.NS", "SARLAPERF.NS", "JPOLYINVST.NS", "AUTHUM.NS",
-    "WANBURY.NS", "TERASOFT.NS", "CHOICEIN.NS", "TDPOWERSYS.NS", "KOLTEPATIL.NS",
-    "KILITCH.NS", "RMDRIP.NS", "KRYSTAL.NS", "SILGO.NS", "TI.NS",
-    "CUPID.NS", "SAHPOLY.NS", "SINDHUTRAD.NS", "WINDMACHIN.NS", "COUNTRYCON.NS",
-    "BASILIC.NS", "URAVI.NS", "PANSARI.NS", "CARYSL.NS", "CONCORD.NS",
-    "BOHRIND.NS", "BYKE.NS", "RAMCOSYS.NS", "VALIANTORG.NS", "TFCILTD.NS",
-    "NAHARSPING.NS", "HOACFOODS.NS", "MANINDS.NS", "APTECHT.NS", "NDRAUTO.NS",
-    "MAHSCOOTER.NS", "DANISHPOW.NS", "AZAD.NS", "AXISCADES.NS", "ALPEX.NS",
-    "PARAGMILK.NS", "SUNDARMHLD.NS", "YUKEN.NS", "SANGHVIMOV.NS", "SSWL.NS",
-    "SHANKARABUILD.NS", "KARNIKA.NS", "MYMUDRA.NS", "SHK.NS", "MEGASOFT.NS",
-    "GOODLUCK.NS", "ASPIRE.NS", "MODIRUBBE.NS", "VESUVIUS.NS", "SURYAROSNI.NS",
-    "ORIENTAROM.NS", "BLKASHYAP.NS", "THYROCARE.NS", "WAAREENG.NS", "GANINFRA.NS",
-    "INFINPHARMA.NS", "ABDIST.NS", "NAHARPOLYF.NS", "MASTERTRUST.NS", "FOSECO.NS",
-    "BUTTERFLY.NS", "MOREPENLABS.NS", "PRUDENT.NS", "AGARTOUG.NS", "FLAIR.NS",
-    "INTERARCH.NS", "RACLGEAR.NS", "TATVA.NS", "GPECO.NS", "SWARAJSUIT.NS",
-    "TVSHLTD.NS", "DREDGECORP.NS", "ANUHPHR.NS", "KRBL.NS", "INDIANCARD.NS",
-    "UFLEX.NS", "BODAL.NS", "SCHAND.NS", "KAYA.NS", "VINYAS.NS",
-    "NAHARINDUS.NS", "BIL.NS", "GABRIEL.NS", "MAXVOLT.NS", "ACMESOLAR.NS",
-    "GEL.NS", "YATRA.NS", "MANORAMA.NS", "APOLLO.NS", "RPTECH.NS",
-    "EIMCOELECO.NS", "KHAITANLTD.NS", "ROSSELLTECH.NS", "URJA.NS", "GRILL.NS",
-    "SOLEXENERGY.NS", "INDPEST.NS", "TANKUP.NS", "DHARMAJ.NS", "PRECWIRE.NS",
-    "VASCON.NS", "PRIZOR.NS", "IFGLEXPOR.NS", "DCX.NS", "BIRLANU.NS",
-    "RALLIS.NS", "SHRIPISTON.NS", "MAHICKRA.NS", "ONESOURCE.NS", "DCBBANK.NS",
-    "REPRO.NS", "ROTOPUMP.NS", "IOLCP.NS", "ARUNAYA.NS", "BALMLAWRIE.NS",
-    "RANEMA.NS", "ISGEC.NS", "UNIVPHOTO.NS", "DHANUKA.NS", "MADRASFERT.NS",
-    "STANDARDGL.NS", "PENIND.NS", "UNIHEALTH.NS", "VRLLOG.NS", "KHAITAN.NS",
-    "SEL.NS", "ARIES.NS", "GENUSPOWER.NS", "GROBTEA.NS", "VSSSL.NS",
-    "DIENSTEN.NS", "WHEELS.NS", "MASONINFRA.NS", "AARTISRF.NS", "AARON.NS",
-    "VISIONINFRA.NS", "VISAKA.NS", "MASTER.NS", "NDTV.NS", "VAIDAA.NS",
-    "THOMASCOOK.NS", "TNPL.NS", "AARTIDRUGS.NS", "BLSINFO.NS", "TALBROAUTO.NS",
-    "DOCMODE.NS", "PRECOT.NS", "ZEELEARN.NS", "TECHNO.NS", "NRBBEARING.NS",
-    "IRIS.NS", "SMSPHARMA.NS", "VINSYS.NS", "SUPREMEPET.NS", "CLSEL.NS",
-    "LOTUSEYE.NS", "IXIGO.NS", "TVSELECT.NS", "INSPIRISYS.NS", "DLINK.NS",
-    "RRW.NS", "ABANS.NS", "ITDCEM.NS", "HIRECT.NS", "TRANSTEEL.NS",
-    "BANNARI.NS", "VILASTRANS.NS", "SANDUMA.NS", "SHARDACROP.NS", "SAGCEM.NS",
-    "UNICOMMERCE.NS", "LUMAXTECH.NS", "AUSOM.NS", "KRITINDT.NS", "MOLDTKPAC.NS",
-    "INTLCONV.NS", "LFIC.NS", "ANLONTECH.NS", "TOKYOPLAST.NS", "BALUFORGE.NS",
-    "SEJAL.NS", "KRITIND.NS", "BHARATSEATS.NS", "EUREKAFORBE.NS", "GHCL-TEXT.NS",
-    "ALEMBICLTD.NS", "LMW.NS", "MEDPLUS.NS", "LINC.NS", "PENLAND.NS",
-    "IWEL.NS", "SAHYADRI.NS", "SKIPPER.NS", "WALCHANNAG.NS", "VOLTAMP.NS",
-    "REMSONSIND.NS", "ZYDUSWELL.NS", "SANDHAR.NS", "HPLELEC.NS", "ABD.NS",
-    "SPAPP.NS", "SHAILY.NS", "SHARDAMOTR.NS", "SONU.NS", "MTAR.NS",
-    "NGLFINECHEM.NS", "SJS.NS", "CAMLINFINE.NS", "SABEVENT.NS", "VINNY.NS",
-    "MAYURUNIQ.NS", "ORIENTPPR.NS", "VADIVARHE.NS", "BHARATGEAR.NS", "ORIANA.NS",
-    "BURGERKING.NS", "RSWM.NS", "THINKHATE.NS", "JBMATO.NS", "GODAVARIBUS.NS",
-    "SOUTHBANK.NS", "LUMAXIND.NS", "SYLVAN.NS", "MOHITIND.NS", "PIX.NS",
-    "COMMITTED.NS", "COSMOFIRST.NS", "ELEGANZ.NS", "MROTEK.NS", "SDRETAIL.NS",
-    "KALPATPOWR.NS", "JAYNECOIND.NS", "VISHMEGA.NS", "JHS.NS", "ZAGGLE.NS",
-    "READYMIX.NS", "SETUBANDHAN.NS", "FIDEL.NS", "JAMNAAUTO.NS", "OPTIEMUS.NS",
-    "BAJELPROJ.NS", "MEGASTAR.NS", "NATHBIOGEN.NS", "ORIENTLTD.NS", "MADHUMASALA.NS",
-    "DVDGVIJAY.NS", "MOIL.NS", "DHARICORP.NS", "RELINFRA.NS", "HECINFRA.NS",
-    "SBCEXPORT.NS", "JAKHARIA.NS", "PHOENIXOVS.NS", "GSMFOILS.NS", "SIGMASOLVE.NS",
-    "POLYPLEX.NS", "ZOTA.NS", "JUBLAGRI.NS", "KPIGREEN.NS", "OSELDEVICES.NS",
-    "MAHAMAYA.NS", "GAJANANN.NS", "APS.NS", "SPREF.NS", "MUNJALAU.NS",
-    "PPAP.NS", "ZODIACLOTH.NS", "FIEMIND.NS", "MENONBE.NS", "GRP.NS",
-    "SUBROS.NS", "AMBIKCO.NS", "ANYAFERTIL.NS", "AKSHAR.NS", "GANESHBHRT.NS",
-    "VELSINTL.NS", "KAVVERITEL.NS", "FOCE.NS", "AARTIPHARMA.NS", "DWARKESH.NS",
-    "TECHERA.NS", "SEQUENT.NS", "KIRIINDUS.NS", "AMJLAND.NS", "INGERRAND.NS",
-    "PHANTOMFX.NS", "IBL.NS", "GKW.NS", "INDNIPPON.NS", "FDC.NS",
-    "LUXIND.NS", "ROLLATAINERS.NS", "MUKANDLTD.NS", "63MOONS.NS", "SIXSIGMA.NS",
-    "PCJEWELLER.NS", "CEREBRAINT.NS", "RAJRATAN.NS", "JAICORPLTD.NS", "DIVGI.NS",
-    "BANKRAINTREE.NS", "STEELXIND.NS", "ALKALI.NS", "HOVS.NS", "JMA.NS",
-    "MUNJALSHOW.NS", "BIRLACABLE.NS", "ALICON.NS", "VEEDOL.NS", "MUFIN.NS",
-    "TII.NS", "VIPCIND.NS", "EUROFRESH.NS", "IPHOSPLT.NS", "INDIANIPPON.NS",
-    "GLOBEINTL.NS", "NILKAMAL.NS", "MUKTAARTS.NS", "SHIVATEX.NS", "HINDWARE.NS",
-    "SUPREMEPOW.NS", "KIOCL.NS", "INNOMET.NS", "MINDTECK.NS", "GEOJITFSL.NS",
-    "ESABINDIA.NS", "CIGNITITECH.NS", "UNIVCABLES.NS", "AATMAJ.NS", "RATNAVEER.NS",
-    "TECHNOCRAFT.NS", "AVITEX.NS", "BHAGERIA.NS", "TRANSRAIL.NS", "MOSUTILITIES.NS",
-    "HMVL.NS", "CENTRUM.NS", "PATTECH.NS", "SMARTLINK.NS", "CADSYS.NS",
-    "APCOTEXIND.NS", "VISAGLOBAL.NS", "TCIEXP.NS", "ROBUSTHOT.NS", "ONLIFECAP.NS",
-    "AGIINFRA.NS", "FUSION.NS", "GLOBALEDU.NS", "ANTONY.NS", "TASTYBITE.NS",
-    "AMBANIORG.NS", "EXWIRES.NS", "COMPUSOFT.NS", "LTFOODS.NS", "MARKSANS.NS",
-    "GOKEX.NS", "PRAMARA.NS", "KAPSTON.NS", "ORTEL.NS", "GILLANDERS.NS",
-    "ALLETHECH.NS", "STCINDIA.NS", "WABAG.NS", "HOLMARC.NS", "RAJCASS.NS",
-    "STEELXIND.NS", "ATLAA.NS", "DIVGI.NS", "ZINKA.NS", "ISHANDYES.NS",
-    "KAYCEEEN.NS", "SAURASHCEM.NS", "ASINGRAN.NS", "IONEXCHANG.NS", "MURUDCERA.NS",
-    "KOTHARISUG.NS", "VRAJ.NS", "MAANLUM.NS", "KIRLOSIND.NS", "ELDEHSG.NS",
-    "MAHALAXFABR.NS", "SHUBHSBIOE.NS", "ORICON.NS", "MAXEST.NS", "NAMOEWASTE.NS",
-    "JAYSHREETEA.NS", "CYBERMEDIA.NS", "BLACKBOX.NS", "AVRO.NS", "LOKESHMACH.NS",
-    "AVTIL.NS", "JITFINFRA.NS", "BHAGYANGR.NS", "TEAMLEASE.NS", "RAMASTEEL.NS",
-    "GMMPFAUDLER.NS", "ABRETS.NS", "PARAGON.NS", "FUSIONRS5.NS", "RUPA.NS",
-    "DPWIRES.NS", "MALUPAPER.NS", "KNAGRI.NS", "PRABHAEN.NS", "RSYSTEMS.NS",
-    "SINTERCOM.NS", "MADHYAPR.NS", "SATIA.NS", "SVPGLOB.NS", "BPL.NS",
-    "MARALOVER.NS", "KRISHIVAL.NS", "INDEMULSIF.NS", "TRACXN.NS", "JIWANRAM.NS",
-    "MASKIN.NS", "EDELWEISS.NS", "UDS.NS", "AMIORG.NS", "MAHLIFE.NS",
-    "LGBBROSLTD.NS", "SRESTHA.NS", "LEMERITE.NS", "KOTHARIPRO.NS", "SONABLW.NS",
-    "SHIGAN.NS", "QVCEXPORTS.NS", "FOODSIN.NS", "VAIBHAVGBL.NS", "GOCOLORS.NS",
-    "GOCLENG.NS", "MMPIL.NS", "SAFARI.NS", "TIRUFORG.NS", "DHUNSRITEA.NS",
-    "PAVNAIND.NS", "IDEALTPT.NS", "PETROCARB.NS", "IFBAGROIND.NS", "HYUNDAIMOTR.NS",
-    "ELECTFORC.NS", "MEDIASSIST.NS", "ASPINWALL.NS", "DREAMFOLKS.NS", "RDS.NS",
-    "MADHYABHA.NS", "GREENLAM.NS", "AIONTECHSO.NS", "LAXMICOT.NS", "WESCARR.NS",
-    "HTMEDIA.NS", "ESPIRITSTON.NS", "POPULARV.NS", "SIGNORIA.NS", "ADITULTRA.NS",
-    "ANMOL.NS", "MPSLTD.NS", "DELTAMAGNT.NS", "BHANDARI.NS", "GUFICBIO.NS",
-    "SATKARTAR.NS", "HEXAWARE.NS", "SUNDARMPON.NS", "GACMTECH.NS", "SADBHIN.NS",
-    "A2ZINFRA.NS", "GAYAHWS.NS", "JAYAGROGN.NS", "DUDIGITL.NS", "INNOVANATH.NS",
-    "NAMANINS.NS", "ACCORDSYN.NS", "SUNLITEREC.NS", "SHRADHAINFR.NS", "ABSMARINE.NS",
-    "RJLLTD.NS", "JAICORP.NS", "SAKSOFT.NS", "WSINDUSTRI.NS", "SCLAYTON.NS",
-    "USHAFIN.NS", "BEARDSELL.NS", "HRHNXTSRVC.NS", "ONWARDTEC.NS", "DIGIKORE.NS",
-    "CRAYONS.NS", "MEGA.NS", "GVKPIL.NS", "SAJHOTELS.NS", "DIGISPICE.NS",
-    "NAGREEKA.NS", "EXPLEO.NS", "INDSWFTLAB.NS", "SASTECH.NS", "SAHAJFASH.NS",
-    "ARHAMTECH.NS", "TRANSWARR.NS", "NAGREEKCAP.NS", "LPSSEC.NS", "PEARLGLOBAL.NS",
-    "PARAMDYE.NS", "PLADA.NS", "CUBEX.NS", "VISHNU.NS", "LAXMIGOLDRN.NS",
-    "PRITISNC.NS", "DIGICONTENT.NS", "SHANTHALA.NS", "TAKE.NS", "SUBEXLTD.NS",
-    "THOMASCOTT.NS", "AGUNIV.NS", "BAWEJASTU.NS", "HILTON.NS", "AKIIND.NS",
-    "WEWIN.NS", "SHREEPUSHK.NS", "ANIINT.NS", "AVPINFRA.NS", "REFEX.NS",
-    "INVENTURE.NS", "SURANISTL.NS", "SHAREINDIA.NS", "ADDICTIVE.NS", "NEWJAISA.NS",
-    "TBICORN.NS", "TBO.NS", "AMBEYLAB.NS", "MANAV.NS", "TIJARIA.NS",
-    "TEMBO.NS", "CAMTECH.NS", "ROXHITECH.NS", "VAKRANGEE.NS"
+    "BALAJIPHOS.NS",  # Correct
+    "MANGCHEFER.NS",  # Correct
+    "PARADEEP.NS",    # Correct
+    "DRREDDY.NS",     # Changed from DRL.NS
+    "ZENTEC.NS",      # Correct
+    "KITEX.NS",       # Correct
+    "ABHIINT.NS",     # Correct
+    "CPSSHAPER.NS",   # Correct
+    "INDIAGLYCO.NS",  # Correct
+    "SHANTIOVERS.NS", # Correct
+    "COFFEEDAY.BO",   # Changed to BSE
+    "LLOYDSLUX.BO",   # Changed to BSE
+    "CENTUM.BO",      # Changed to BSE
+    "ASHIMA.BO",      # Changed to BSE
+    "UTTAMSUGAR.BO",  # Changed to BSE
+    "SHEETALUNI.BO",  # Changed to BSE
+    "PRIVISCL.BO",    # Changed to BSE
+    "FORCEMOT.NS",    # Correct
+    "VASULOG.BO",     # Changed to BSE
+    "ELINEL.BO",      # Changed to BSE
+    "SPORTKING.BO",   # Changed to BSE
+    "NUCLEUS.BO",     # Changed to BSE
+    "ASAHISONG.BO",   # Changed to BSE
+    "JINDALPHOT.BO",  # Changed to BSE
+    "ANURAS.BO",      # Changed to BSE
+    "HITACHIEN.NS",   # Correct
+    "ECOSMOB.BO",     # Changed to BSE
+    "SARLAPERF.BO",   # Changed to BSE
+    "JPOLYINVST.BO",  # Changed to BSE
+    "AUTHUM.BO",      # Changed to BSE
+    "WANBURY.BO",     # Changed to BSE
+    "TERASOFT.BO",    # Changed to BSE
+    "CHOICEIN.BO",    # Changed to BSE
+    "TDPOWERSYS.BO",  # Changed to BSE
+    "KOLTEPATIL.BO",  # Changed to BSE
+    "KILITCH.BO",     # Changed to BSE
+    "RMDRIP.BO",      # Changed to BSE
+    "KRYSTAL.BO",     # Changed to BSE
+    "SILGO.BO",       # Changed to BSE
+    "TITAN.NS",       # Changed from TI.NS
+    "CUPID.BO",       # Changed to BSE
+    "SAHPOLY.BO",     # Changed to BSE
+    "SINDHUTRAD.BO",  # Changed to BSE
+    "WINDMACHIN.BO",  # Changed to BSE
+    "COUNTRYCON.BO",  # Changed to BSE
+    "BASILIC.BO",     # Changed to BSE
+    "URAVI.BO",       # Changed to BSE
+    "PANSARI.BO",     # Changed to BSE
+    "CARYSL.BO",      # Changed to BSE
+    "CONCORD.BO",     # Changed to BSE
+    "BOHRIND.BO",     # Changed to BSE
+    "BYKE.BO",        # Changed to BSE
+    "RAMCOSYS.BO",    # Changed to BSE
+    "VALIANTORG.BO",  # Changed to BSE
+    "TFCILTD.BO",     # Changed to BSE
+    "NAHARSPING.BO",  # Changed to BSE
+    "HOACFOODS.BO",   # Changed to BSE
+    "MANINDS.BO",     # Changed to BSE
+    "APTECHT.BO",     # Changed to BSE
+    "NDRAUTO.BO",     # Changed to BSE
+    "MAHSCOOTER.BO",  # Changed to BSE
+    "DANISHPOW.BO",   # Changed to BSE
+    "AZAD.BO",        # Changed to BSE
+    "AXISCADES.NS",   # Correct
+    "ALPEX.BO",       # Changed to BSE
+    "PARAGMILK.BO",   # Changed to BSE
+    "SUNDARMHLD.BO",  # Changed to BSE
+    "YUKEN.BO",       # Changed to BSE
+    "SANGHVIMOV.BO",  # Changed to BSE
+    "SSWL.BO",        # Changed to BSE
+    "SHANKARABUILD.BO", # Changed to BSE
+    "KARNIKA.BO",     # Changed to BSE
+    "MYMUDRA.BO",     # Changed to BSE
+    "SHK.BO",         # Changed to BSE
+    "MEGASOFT.BO",    # Changed to BSE
+    "GOODLUCK.BO",    # Changed to BSE
+    "ASPIRE.BO",      # Changed to BSE
+    "MODIRUBBE.BO",   # Changed to BSE
+    "VESUVIUS.NS",    # Correct
+    "SURYAROSNI.BO",  # Changed to BSE
+    "ORIENTAROM.BO",  # Changed to BSE
+    "BLKASHYAP.BO",   # Changed to BSE
+    "THYROCARE.NS",   # Correct
+    "WAAREENG.BO",    # Changed to BSE
+    "GANINFRA.BO",    # Changed to BSE
+    "INFINPHARMA.BO", # Changed to BSE
+    "ABDIST.BO",      # Changed to BSE
+    "NAHARPOLYF.BO",  # Changed to BSE
+    "MASTERTRUST.BO", # Changed to BSE
+    "FOSECO.BO",      # Changed to BSE
+    "BUTTERFLY.BO",   # Changed to BSE
+    "MOREPENLABS.BO", # Changed to BSE
+    "PRUDENT.BO",     # Changed to BSE
+    "AGARTOUG.BO",    # Changed to BSE
+    "FLAIR.BO",       # Changed to BSE
+    "INTERARCH.BO",   # Changed to BSE
+    "RACLGEAR.BO",    # Changed to BSE
+    "TATVA.BO",       # Changed to BSE
+    "GPECO.BO",       # Changed to BSE
+    "SWARAJSUIT.BO",  # Changed to BSE
+    "TVSHLTD.BO",     # Changed to BSE
+    "DREDGECORP.BO",  # Changed to BSE
+    "ANUHPHR.BO",     # Changed to BSE
+    "KRBL.NS",        # Correct
+    "INDIANCARD.BO",  # Changed to BSE
+    "UFLEX.NS",       # Correct
+    "BODAL.BO",       # Changed to BSE
+    "SCHAND.BO",      # Changed to BSE
+    "KAYA.BO",        # Changed to BSE
+    "VINYAS.BO",      # Changed to BSE
+    "NAHARINDUS.BO",  # Changed to BSE
+    "BIL.BO",         # Changed to BSE
+    "GABRIEL.NS",     # Correct
+    "MAXVOLT.BO",     # Changed to BSE
+    "ACMESOLAR.BO",   # Changed to BSE
+    "GEL.BO",         # Changed to BSE
+    "YATRA.NS",       # Correct
+    "MANORAMA.BO",    # Changed to BSE
+    "APOLLO.NS",      # Correct
+    "RPTECH.BO",      # Changed to BSE
+    "EIMCOELECO.BO",  # Changed to BSE
+    "KHAITANLTD.BO",  # Changed to BSE
+    "ROSSELLTECH.BO", # Changed to BSE
+    "URJA.BO",        # Changed to BSE
+    "GRILL.BO",       # Changed to BSE
+    "SOLEXENERGY.BO", # Changed to BSE
+    "INDPEST.BO",     # Changed to BSE
+    "TANKUP.BO",      # Changed to BSE
+    "DHARMAJ.BO",     # Changed to BSE
+    "PRECWIRE.BO",    # Changed to BSE
+    "VASCON.BO",      # Changed to BSE
+    "PRIZOR.BO",      # Changed to BSE
+    "IFGLEXPOR.BO",   # Changed to BSE
+    "DCX.BO",         # Changed to BSE
+    "BIRLANU.BO",     # Changed to BSE
+    "RALLIS.NS",      # Correct
+    "SHRIPISTON.BO",  # Changed to BSE
+    "MAHICKRA.BO",    # Changed to BSE
+    "ONESOURCE.BO",   # Changed to BSE
+    "DCBBANK.BO",     # Changed to BSE
+    "REPRO.BO",       # Changed to BSE
+    "ROTOPUMP.BO",    # Changed to BSE
+    "IOLCP.BO",       # Changed to BSE
+    "ARUNAYA.BO",     # Changed to BSE
+    "BALMLAWRIE.BO",  # Changed to BSE
+    "RANEMA.BO",      # Changed to BSE
+    "ISGEC.NS",       # Correct
+    "UNIVPHOTO.BO",   # Changed to BSE
+    "DHANUKA.NS",     # Correct
+    "MADRASFERT.BO",  # Changed to BSE
+    "STANDARDGL.BO",  # Changed to BSE
+    "PENIND.BO",      # Changed to BSE
+    "UNIHEALTH.BO",   # Changed to BSE
+    "VRLLOG.BO",      # Changed to BSE
+    "KHAITAN.BO",     # Changed to BSE
+    "SEL.BO",         # Changed to BSE
+    "ARIES.BO",       # Changed to BSE
+    "GENUSPOWER.BO",  # Changed to BSE
+    "GROBTEA.BO",     # Changed to BSE
+    "VSSSL.BO",       # Changed to BSE
+    "DIENSTEN.BO",    # Changed to BSE
+    "WHEELS.BO",      # Changed to BSE
+    "MASONINFRA.BO",  # Changed to BSE
+    "AARTISRF.BO",    # Changed to BSE
+    "AARON.BO",       # Changed to BSE
+    "VISIONINFRA.BO", # Changed to BSE
+    "VISAKA.NS",      # Correct
+    "MASTER.BO",      # Changed to BSE
+    "NDTV.BO",        # Changed to BSE
+    "VAIDAA.BO",      # Changed to BSE
+    "THOMASCOOK.BO",  # Changed to BSE
+    "TNPL.BO",        # Changed to BSE
+    "AARTIDRUGS.BO",  # Changed to BSE
+    "BLSINFO.BO",     # Changed to BSE
+    "TALBROAUTO.BO",  # Changed to BSE
+    "DOCMODE.BO",     # Changed to BSE
+    "PRECOT.BO",      # Changed to BSE
+    "ZEELEARN.BO",    # Changed to BSE
+    "TECHNO.BO",      # Changed to BSE
+    "NRBBEARING.NS",  # Correct
+    "IRIS.BO",        # Changed to BSE
+    "SMSPHARMA.BO",   # Changed to BSE
+    "VINSYS.BO",      # Changed to BSE
+    "SUPREMEPET.BO",  # Changed to BSE
+    "CLSEL.BO",       # Changed to BSE
+    "LOTUSEYE.BO",    # Changed to BSE
+    "IXIGO.NS",       # Correct
+    "TVSELECT.BO",    # Changed to BSE
+    "INSPIRISYS.BO",  # Changed to BSE
+    "DLINK.BO",       # Changed to BSE
+    "RRW.BO",         # Changed to BSE
+    "ABANS.BO",       # Changed to BSE
+    "ITDCEM.BO",      # Changed to BSE
+    "HIRECT.BO",      # Changed to BSE
+    "TRANSTEEL.BO",   # Changed to BSE
+    "BANNARI.BO",     # Changed to BSE
+    "VILASTRANS.BO",  # Changed to BSE
+    "SANDUMA.BO",     # Changed to BSE
+    "SHARDACROP.BO",  # Changed to BSE
+    "SAGCEM.BO",      # Changed to BSE
+    "UNICOMMERCE.BO", # Changed to BSE
+    "LUMAXTECH.BO",   # Changed to BSE
+    "AUSOM.BO",       # Changed to BSE
+    "KRITINDT.BO",    # Changed to BSE
+    "MOLDTKPAC.BO",   # Changed to BSE
+    "INTLCONV.BO",    # Changed to BSE
+    "LFIC.BO",        # Changed to BSE
+    "ANLONTECH.BO",   # Changed to BSE
+    "TOKYOPLAST.BO",  # Changed to BSE
+    "BALUFORGE.BO",   # Changed to BSE
+    "SEJAL.BO",       # Changed to BSE
+    "KRITIND.BO",     # Changed to BSE
+    "BHARATSEATS.BO", # Changed to BSE
+    "EUREKAFORBE.BO", # Changed to BSE
+    "GHCL.NS",        # Changed from GHCL-TEXT.NS
+    "LMW.BO",         # Changed to BSE
+    "MEDPLUS.NS",     # Correct
+    "LINC.BO",        # Changed to BSE
+    "PENLAND.BO",     # Changed to BSE
+    "IWEL.BO",        # Changed to BSE
+    "SAHYADRI.BO",    # Changed to BSE
+    "SKIPPER.NS",     # Correct
+    "WALCHANNAG.BO",  # Changed to BSE
+    "VOLTAMP.BO",     # Changed to BSE
+    "REMSONSIND.BO",  # Changed to BSE
+    "ZYDUSWELL.BO",   # Changed to BSE
+    "SANDHAR.BO",     # Changed to BSE
+    "HPLELEC.BO",     # Changed to BSE
+    "ABD.BO",         # Changed to BSE
+    "SPAPP.BO",       # Changed to BSE
+    "SHAILY.BO",      # Changed to BSE
+    "SHARDAMOTR.BO",  # Changed to BSE
+    "SONU.BO",        # Changed to BSE
+    "MTAR.NS",        # Correct
+    "NGLFINECHEM.BO", # Changed to BSE
+    "SJS.BO",         # Changed to BSE
+    "CAMLINFINE.BO",  # Changed to BSE
+    "SABEVENT.BO",    # Changed to BSE
+    "VINNY.BO",       # Changed to BSE
+    "MAYURUNIQ.BO",   # Changed to BSE
+    "ORIENTPPR.BO",   # Changed to BSE
+    "VADIVARHE.BO",   # Changed to BSE
+    "BHARATGEAR.BO",  # Changed to BSE
+    "ORIANA.BO",      # Changed to BSE
+    "BURGERKING.NS",  # Correct
+    "RSWM.NS",        # Correct
+    "THINKHATE.BO",   # Changed to BSE
+    "JBMATO.BO",      # Changed to BSE
+    "GODAVARIBUS.BO", # Changed to BSE
+    "SOUTHBANK.NS",   # Correct
+    "LUMAXIND.NS",    # Correct
+    "SYLVAN.BO",      # Changed to BSE
+    "MOHITIND.BO",    # Changed to BSE
+    "PIX.BO",         # Changed to BSE
+    "COMMITTED.BO",   # Changed to BSE
+    "COSMOFIRST.BO",  # Changed to BSE
+    "ELEGANZ.BO",     # Changed to BSE
+    "MROTEK.BO",      # Changed to BSE
+    "SDRETAIL.BO",    # Changed to BSE
+    "KALPATPOWR.BO",  # Changed to BSE
+    "JAYNECOIND.BO",  # Changed to BSE
+    "VISHMEGA.BO",    # Changed to BSE
+    "JHS.BO",         # Changed to BSE
+    "ZAGGLE.NS",      # Correct
+    "READYMIX.BO",    # Changed to BSE
+    "SETUBANDHAN.BO", # Changed to BSE
+    "FIDEL.BO",       # Changed to BSE
+    "JAMNAAUTO.NS",   # Correct
+    "OPTIEMUS.BO",    # Changed to BSE
+    "BAJELPROJ.BO",   # Changed to BSE
+    "MEGASTAR.BO",    # Changed to BSE
+    "NATHBIOGEN.BO",  # Changed to BSE
+    "ORIENTLTD.BO",   # Changed to BSE
+    "MADHUMASALA.BO", # Changed to BSE
+    "DVDGVIJAY.BO",   # Changed to BSE
+    "MOIL.NS",        # Correct
+    "DHARICORP.BO",   # Changed to BSE
+    "RELINFRA.NS",    # Correct
+    "HECINFRA.BO",    # Changed to BSE
+    "SBCEXPORT.BO",   # Changed to BSE
+    "JAKHARIA.BO",    # Changed to BSE
+    "PHOENIXOVS.BO",  # Changed to BSE
+    "GSMFOILS.BO",    # Changed to BSE
+    "SIGMASOLVE.BO",  # Changed to BSE
+    "POLYPLEX.BO",    # Changed to BSE
+    "ZOTA.BO",        # Changed to BSE
+    "JUBLAGRI.BO",    # Changed to BSE
+    "KPIGREEN.BO",    # Changed to BSE
+    "OSELDEVICES.BO", # Changed to BSE
+    "MAHAMAYA.BO",    # Changed to BSE
+    "GAJANANN.BO",    # Changed to BSE
+    "APS.BO",         # Changed to BSE
+    "SPREF.BO",       # Changed to BSE
+    "MUNJALAU.BO",    # Changed to BSE
+    "PPAP.BO",        # Changed to BSE
+    "ZODIACLOTH.BO",  # Changed to BSE
+    "FIEMIND.NS",     # Correct
+    "MENONBE.BO",     # Changed to BSE
+    "GRP.BO",         # Changed to BSE
+    "SUBROS.NS",      # Correct
+    "AMBIKCO.BO",     # Changed to BSE
+    "ANYAFERTIL.BO",  # Changed to BSE
+    "AKSHAR.BO",      # Changed to BSE
+    "GANESHBHRT.BO",  # Changed to BSE
+    "VELSINTL.BO",    # Changed to BSE
+    "KAVVERITEL.BO",  # Changed to BSE
+    "FOCE.BO",        # Changed to BSE
+    "AARTIPHARMA.BO", # Changed to BSE
+    "DWARKESH.BO",    # Changed to BSE
+    "TECHERA.BO",     # Changed to BSE
+    "SEQUENT.BO",     # Changed to BSE
+    "KIRIINDUS.BO",   # Changed to BSE
+    "AMJLAND.BO",     # Changed to BSE
+    "INGERRAND.BO",   # Changed to BSE
+    "PHANTOMFX.BO",   # Changed to BSE
+    "IBL.BO",         # Changed to BSE
+    "GKW.BO",         # Changed to BSE
+    "INDNIPPON.NS",   # Correct
+    "FDC.NS",         # Correct
+    "LUXIND.NS",      # Correct
+    "ROLLATAINERS.BO", # Changed to BSE
+    "MUKANDLTD.BO",   # Changed to BSE
+    "SIXSIGMA.BO",    # Changed to BSE
+    "PCJEWELLER.NS",  # Correct
+    "CEREBRAINT.BO",  # Changed to BSE
+    "RAJRATAN.BO",    # Changed to BSE
+    "JAICORPLTD.BO",  # Changed to BSE
+    "DIVGI.NS",       # Correct
+    "BANKRAINTREE.BO", # Changed to BSE
+    "STEELXIND.BO",   # Changed to BSE
+    "ALKALI.BO",      # Changed to BSE
+    "HOVS.BO",        # Changed to BSE
+    "JMA.BO",         # Changed to BSE
+    "MUNJALSHOW.BO",  # Changed to BSE
+    "BIRLACABLE.BO",  # Changed to BSE
+    "ALICON.BO",      # Changed to BSE
+    "VEEDOL.BO",      # Changed to BSE
+    "MUFIN.BO",       # Changed to BSE
+    "TII.BO",         # Changed to BSE
+    "VIPCIND.BO",     # Changed to BSE
+    "EUROFRESH.BO",   # Changed to BSE
+    "IPHOSPLT.BO",    # Changed to BSE
+    "INDIANIPPON.BO", # Changed to BSE
+    "GLOBEINTL.BO",   # Changed to BSE
+    "NILKAMAL.NS",    # Correct
+    "MUKTAARTS.BO",   # Changed to BSE
+    "SHIVATEX.BO",    # Changed to BSE
+    "HINDWARE.NS",    # Correct
+    "SUPREMEPOW.BO",  # Changed to BSE
+    "KIOCL.NS",       # Correct
+    "INNOMET.BO",     # Changed to BSE
+    "MINDTECK.NS",    # Correct
+    "GEOJITFSL.BO",   # Changed to BSE
+    "ESABINDIA.NS",   # Correct
+    "CIGNITITECH.BO", # Changed to BSE
+    "UNIVCABLES.BO",  # Changed to BSE
+    "AATMAJ.BO",      # Changed to BSE
+    "RATNAVEER.BO",   # Changed to BSE
+    "TECHNOCRAFT.BO", # Changed to BSE
+    "AVITEX.BO",      # Changed to BSE
+    "BHAGERIA.BO",    # Changed to BSE
+    "TRANSRAIL.BO",   # Changed to BSE
+    "MOSUTILITIES.BO", # Changed to BSE
+    "HMVL.BO",        # Changed to BSE
+    "CENTRUM.BO",     # Changed to BSE
+    "PATTECH.BO",     # Changed to BSE
+    "SMARTLINK.BO",   # Changed to BSE
+    "CADSYS.BO",      # Changed to BSE
+    "APCOTEXIND.NS",  # Correct
+    "VISAGLOBAL.BO",  # Changed to BSE
+    "TCIEXP.BO",      # Changed to BSE
+    "ROBUSTHOT.BO",   # Changed to BSE
+    "ONLIFECAP.BO",   # Changed to BSE
+    "AGIINFRA.BO",    # Changed to BSE
+    "FUSION.BO",      # Changed to BSE
+    "GLOBALEDU.BO",   # Changed to BSE
+    "ANTONY.BO",      # Changed to BSE
+    "TASTYBITE.BO",   # Changed to BSE
+    "AMBANIORG.BO",   # Changed to BSE
+    "EXWIRES.BO",     # Changed to BSE
+    "COMPUSOFT.BO",   # Changed to BSE
+    "LTFOODS.NS",     # Correct
+    "MARKSANS.NS",    # Correct
+    "GOKEX.BO",       # Changed to BSE
+    "PRAMARA.BO",     # Changed to BSE
+    "KAPSTON.BO",     # Changed to BSE
+    "ORTEL.BO",       # Changed to BSE
+    "GILLANDERS.BO",  # Changed to BSE
+    "ALLETHECH.BO",   # Changed to BSE
+    "STCINDIA.BO",    # Changed to BSE
+    "WABAG.NS",       # Correct
+    "HOLMARC.BO",     # Changed to BSE
+    "RAJCASS.BO",     # Changed to BSE
+    "ATLAA.BO",       # Changed to BSE
+    "ZINKA.BO",       # Changed to BSE
+    "ISHANDYES.BO",   # Changed to BSE
+    "KAYCEEEN.BO",    # Changed to BSE
+    "SAURASHCEM.BO",  # Changed to BSE
+    "ASINGRAN.BO",    # Changed to BSE
+    "IONEXCHANG.BO",  # Changed to BSE
+    "MURUDCERA.BO",   # Changed to BSE
+    "KOTHARISUG.BO",  # Changed to BSE
+    "VRAJ.BO",        # Changed to BSE
+    "MAANLUM.BO",     # Changed to BSE
+    "KIRLOSIND.BO",   # Changed to BSE
+    "ELDEHSG.BO",     # Changed to BSE
+    "MAHALAXFABR.BO", # Changed to BSE
+    "SHUBHSBIOE.BO",  # Changed to BSE
+    "ORICON.BO",      # Changed to BSE
+    "MAXEST.BO",      # Changed to BSE
+    "NAMOEWASTE.BO",  # Changed to BSE
+    "JAYSHREETEA.BO", # Changed to BSE
+    "CYBERMEDIA.BO",  # Changed to BSE
+    "BLACKBOX.BO",    # Changed to BSE
+    "AVRO.BO",        # Changed to BSE
+    "LOKESHMACH.BO",  # Changed to BSE
+    "AVTIL.BO",       # Changed to BSE
+    "JITFINFRA.BO",   # Changed to BSE
+    "BHAGYANGR.BO",   # Changed to BSE
+    "TEAMLEASE.NS",   # Correct
+    "RAMASTEEL.BO",   # Changed to BSE
+    "GMMPFAUDLER.BO", # Changed to BSE
+    "ABRETS.BO",      # Changed to BSE
+    "PARAGON.BO",     # Changed to BSE
+    "FUSIONRS5.BO",   # Changed to BSE
+    "RUPA.NS",        # Correct
+    "DPWIRES.BO",     # Changed to BSE
+    "MALUPAPER.BO",   # Changed to BSE
+    "KNAGRI.BO",      # Changed to BSE
+    "PRABHAEN.BO",    # Changed to BSE
+    "RSYSTEMS.BO",    # Changed to BSE
+    "SINTERCOM.BO",   # Changed to BSE
+    "MADHYAPR.BO",    # Changed to BSE
+    "SATIA.BO",       # Changed to BSE
+    "SVPGLOB.BO",     # Changed to BSE
+    "BPL.BO",         # Changed to BSE
+    "MARALOVER.BO",   # Changed to BSE
+    "KRISHIVAL.BO",   # Changed to BSE
+    "INDEMULSIF.BO",  # Changed to BSE
+    "TRACXN.NS",      # Correct
+    "JIWANRAM.BO",    # Changed to BSE
+    "MASKIN.BO",      # Changed to BSE
+    "EDELWEISS.NS",   # Correct
+    "UDS.BO",         # Changed to BSE
+    "AMIORG.BO",      # Changed to BSE
+    "MAHLIFE.NS",     # Correct
+    "LGBBROSLTD.BO",  # Changed to BSE
+    "SRESTHA.BO",     # Changed to BSE
+    "LEMERITE.BO",    # Changed to BSE
+    "KOTHARIPRO.BO",  # Changed to BSE
+    "SONABLW.BO",     # Changed to BSE
+    "SHIGAN.BO",      # Changed to BSE
+    "QVCEXPORTS.BO",  # Changed to BSE
+    "FOODSIN.BO",     # Changed to BSE
+    "VAIBHAVGBL.BO",  # Changed to BSE
+    "GOCOLORS.NS",    # Correct
+    "GOCLENG.BO",     # Changed to BSE
+    "MMPIL.BO",       # Changed to BSE
+    "SAFARI.NS",      # Correct
+    "TIRUFORG.BO",    # Changed to BSE
+    "DHUNSRITEA.BO",  # Changed to BSE
+    "PAVNAIND.BO",    # Changed to BSE
+    "IDEALTPT.BO",    # Changed to BSE
+    "PETROCARB.BO",   # Changed to BSE
+    "IFBAGROIND.BO",  # Changed to BSE
+    "HYUNDAIMOTR.NS", # Correct
+    "ELECTFORC.BO",   # Changed to BSE
+    "MEDIASSIST.NS",  # Correct
+    "ASPINWALL.BO",   # Changed to BSE
+    "DREAMFOLKS.NS",  # Correct
+    "RDS.BO",         # Changed to BSE
+    "MADHYABHA.BO",   # Changed to BSE
+    "GREENLAM.NS",    # Correct
+    "AIONTECHSO.BO",  # Changed to BSE
+    "LAXMICOT.BO",    # Changed to BSE
+    "WESCARR.BO",     # Changed to BSE
+    "HTMEDIA.NS",     # Correct
+    "ESPIRITSTON.BO", # Changed to BSE
+    "POPULARV.BO",    # Changed to BSE
+    "SIGNORIA.BO",    # Changed to BSE
+    "ADITULTRA.BO",   # Changed to BSE
+    "ANMOL.BO",       # Changed to BSE
+    "MPSLTD.NS",      # Correct
+    "DELTAMAGNT.BO",  # Changed to BSE
+    "BHANDARI.BO",    # Changed to BSE
+    "GUFICBIO.BO",    # Changed to BSE
+    "SATKARTAR.BO",   # Changed to BSE
+    "HEXAWARE.NS",    # Correct
+    "SUNDARMPON.BO",  # Changed to BSE
+    "GACMTECH.BO",    # Changed to BSE
+    "SADBHIN.BO",     # Changed to BSE
+    "A2ZINFRA.BO",    # Changed to BSE
+    "GAYAHWS.BO",     # Changed to BSE
+    "JAYAGROGN.BO",   # Changed to BSE
+    "DUDIGITL.BO",    # Changed to BSE
+    "INNOVANATH.BO",  # Changed to BSE
+    "NAMANINS.BO",    # Changed to BSE
+    "ACCORDSYN.BO",   # Changed to BSE
+    "SUNLITEREC.BO",  # Changed to BSE
+    "SHRADHAINFR.BO", # Changed to BSE
+    "ABSMARINE.BO",   # Changed to BSE
+    "RJLLTD.BO",      # Changed to BSE
+    "JAICORP.BO",     # Changed to BSE
+    "SAKSOFT.NS",     # Correct
+    "WSINDUSTRI.BO",  # Changed to BSE
+    "SCLAYTON.BO",    # Changed to BSE
+    "USHAFIN.BO",     # Changed to BSE
+    "BEARDSELL.BO",   # Changed to BSE
+    "HRHNXTSRVC.BO",  # Changed to BSE
+    "ONWARDTEC.BO",   # Changed to BSE
+    "DIGIKORE.BO",    # Changed to BSE
+    "CRAYONS.NS",     # Correct
+    "MEGA.BO",        # Changed to BSE
+    "GVKPIL.BO",      # Changed to BSE
+    "SAJHOTELS.BO",   # Changed to BSE
+    "DIGISPICE.BO",   # Changed to BSE
+    "NAGREEKA.BO",    # Changed to BSE
+    "EXPLEO.BO",      # Changed to BSE
+    "INDSWFTLAB.BO",  # Changed to BSE
+    "SASTECH.BO",     # Changed to BSE
+    "SAHAJFASH.BO",   # Changed to BSE
+    "ARHAMTECH.BO",   # Changed to BSE
+    "TRANSWARR.BO",   # Changed to BSE
+    "NAGREEKCAP.BO",  # Changed to BSE
+    "LPSSEC.BO",      # Changed to BSE
+    "PEARLGLOBAL.BO", # Changed to BSE
+    "PARAMDYE.BO",    # Changed to BSE
+    "PLADA.BO",       # Changed to BSE
+    "CUBEX.BO",       # Changed to BSE
+    "VISHNU.BO",      # Changed to BSE
+    "LAXMIGOLDRN.BO", # Changed to BSE
+    "PRITISNC.BO",    # Changed to BSE
+    "DIGICONTENT.BO", # Changed to BSE
+    "SHANTHALA.BO",   # Changed to BSE
+    "TAKE.BO",        # Changed to BSE
+    "SUBEXLTD.BO",    # Changed to BSE
+    "THOMASCOTT.BO",  # Changed to BSE
+    "AGUNIV.BO",      # Changed to BSE
+    "BAWEJASTU.BO",   # Changed to BSE
+    "HILTON.BO",      # Changed to BSE
+    "AKIIND.BO",      # Changed to BSE
+    "WEWIN.BO",       # Changed to BSE
+    "SHREEPUSHK.BO",  # Changed to BSE
+    "ANIINT.BO",      # Changed to BSE
+    "AVPINFRA.BO",    # Changed to BSE
+    "REFEX.BO",       # Changed to BSE
+    "INVENTURE.BO",   # Changed to BSE
+    "SURANISTL.BO",   # Changed to BSE
+    "SHAREINDIA.BO",  # Changed to BSE
+    "ADDICTIVE.BO",   # Changed to BSE
+    "NEWJAISA.BO",    # Changed to BSE
+    "TBICORN.BO",     # Changed to BSE
+    "TBO.BO",         # Changed to BSE
+    "AMBEYLAB.BO",    # Changed to BSE
+    "MANAV.BO",       # Changed to BSE
+    "TIJARIA.BO",     # Changed to BSE
+    "TEMBO.BO",       # Changed to BSE
+    "CAMTECH.BO",     # Changed to BSE
+    "ROXHITECH.BO",   # Changed to BSE
+    "VAKRANGEE.BO"    # Changed to BSE
 ])
 
 
