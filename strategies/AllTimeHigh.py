@@ -1,7 +1,7 @@
 import yfinance as yf
 
-from Index import fetch_nifty500_list
-from Sectors import sector_mapping
+from data.Index import fetch_nifty500_list
+from data.Sectors import sector_mapping
 
 
 # Define a function to get historical data and check for new all-time highs

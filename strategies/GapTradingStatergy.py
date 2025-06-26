@@ -1,8 +1,6 @@
 import yfinance as yf
 import pandas as pd
-import numpy as np
-from datetime import datetime, time, timedelta
-from stratergy.Index import fetch_nifty50_list
+from data.Index import fetch_nifty50_list
 
 # List of Nifty 50 stock symbols
 

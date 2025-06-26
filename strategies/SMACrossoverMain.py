@@ -1,5 +1,5 @@
-from SMABacktester import SMABacktester
-from Index import fetch_nifty50_list
+from backtests.SMABacktester import SMABacktester
+from data.Index import fetch_nifty50_list
 
 def main():
     # Get a list of Nifty 500 tickers (these are just examples; you'll need to get the full list)

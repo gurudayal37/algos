@@ -1,12 +1,31 @@
-# Ignore everything
-*
-
-# Except the stratergy directory
-!stratergy/
-!stratergy/**
-
-# But ignore these specific files/directories
-.DS_Store
-.venv/
+# Python cache files
 __pycache__/
-*.pyc 
+*.py[cod]
+*$py.class
+
+# Virtual Environment
+.venv/
+venv/
+ENV/
+../.venv/
+
+# IDE specific files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS specific files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+../.DS_Store
+
+# Ignore everything in parent directory except this repository
+/strategies/PEAD.py
+!stratergy/
+!stratergy/** 
