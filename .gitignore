@@ -7,13 +7,14 @@ __pycache__/
 .venv/
 venv/
 ENV/
-../.venv/
+env/
 
 # IDE specific files
 .idea/
 .vscode/
 *.swp
 *.swo
+*~
 
 # OS specific files
 .DS_Store
@@ -23,9 +24,131 @@ ENV/
 .Trashes
 ehthumbs.db
 Thumbs.db
-../.DS_Store
 
-# Ignore everything in parent directory except this repository
-/strategies/PEAD.py
-!stratergy/
-!stratergy/** 
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/
+
+# pyenv
+.python-version
+
+# celery beat schedule file
+celerybeat-schedule
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Data files (common in trading/ML projects)
+*.csv
+*.xlsx
+*.xls
+*.parquet
+*.h5
+*.hdf5
+*.pkl
+*.pickle
+
+# Log files
+*.log
+logs/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Specific to this project - ignore data files but keep strategies
+data/*.csv
+data/*.xlsx
+data/*.parquet
+backtests/results/
+sheets/*.xlsx
+sheets/*.xls
+
+# Keep strategies folder
+!strategies/
+!strategies/** 

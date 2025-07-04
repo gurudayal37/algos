@@ -1,4 +1,6 @@
 import yfinance as yf
+import pandas as pd
+from datetime import datetime, timedelta
 
 from data.Index import fetch_nifty500_list
 from data.Sectors import sector_mapping
@@ -20,8 +22,17 @@ def check_new_all_time_high(ticker, period='7y'):
     previous_all_time_high_date = data['High'].iloc[:-1].idxmax()
     print(f"{ticker} has hit a previous all-time high  of {all_time_high} on {previous_all_time_high_date}!")
 
+    # Check if previous all-time high was more than 3 months ago
+    if isinstance(previous_all_time_high_date, pd.Timestamp):
+        previous_ath_date = previous_all_time_high_date.to_pydatetime()
+    else:
+        previous_ath_date = pd.to_datetime(previous_all_time_high_date)
+    three_months_ago = datetime.now() - pd.DateOffset(months=3)
+    if previous_ath_date > three_months_ago:
+        return False, None
+
     # Get the most recent closing price
-    last_close = data['High'].iloc[-1:].max()
+    last_close = data['Close'].iloc[-1:].max()
 
     if last_close > all_time_high:
         # Find the date where the all-time high was recorded
