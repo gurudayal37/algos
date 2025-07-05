@@ -21,12 +21,7 @@ import statsmodels.api as sm
 from statsmodels.tsa.arima.model import ARIMA
 import pandas as pd
 import time
-
-
-def download_data(ticker, interval='1mo', period='7y'):
-    data = yf.download(ticker, period=period, interval=interval , progress=False)
-    data.columns = [col[0].replace(r'/.+$', '') if isinstance(col, tuple) else col for col in data.columns]
-    return data
+from utils.helper import download_data
 
 
 def check_stationarity_quick(the_series, name):
@@ -46,6 +41,36 @@ def check_stationarity_quick(the_series, name):
     else:
         print("❌ NON-STATIONARY: Need to transform the data.")
     print()
+
+# Create rolling forecasts
+def create_ar_strategy(data, train_window=100):
+    """
+    Build a trading strategy using rolling AR(1) forecasts
+    """
+    results = []
+    
+    for i in range(train_window, len(data)):
+        # Use past 'train_window' observations to fit model
+        if i % 100 == 0:
+            print(f"Processed {i}/{len(data)}")
+        train_series = data.iloc[i-train_window:i]
+        
+        # Fit AR(1) model (ARIMA with order=(1, 0, 0))
+        init_model = ARIMA(train_series, order=(1, 0, 0))
+        fitted_model = init_model.fit()
+        
+        # Make one-step-ahead forecast
+        forecast = fitted_model.forecast(steps=1)[0]
+        
+        # Store result
+        results.append({
+            'date': data.index[i],
+            'actual_returns': data.iloc[i],
+            'predicted_returns': forecast,
+            'signal': 1 if forecast > 0 else -1
+        })
+    
+    return pd.DataFrame(results).set_index('date')
 
 
 ticker = 'RELIANCE.NS'
