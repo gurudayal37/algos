@@ -1,4 +1,6 @@
 import yfinance as yf
+import pandas as pd
+from datetime import timedelta
 
 def download_data(ticker, interval='1mo', period='7y'):
     data = yf.download(ticker, period=period, interval=interval , progress=False)
@@ -31,11 +33,11 @@ def get_piotroski_score(ticker):
 
         # Profitability
         net_income = is_.loc["Net Income", current_year]
-        operating_cf = cf.loc["Total Cash From Operating Activities", current_year]
+        operating_cf = cf.loc["Operating Cash Flow", current_year]
         total_assets = bs.loc["Total Assets", current_year]
         prev_total_assets = bs.loc["Total Assets", prev_year]
         prev_net_income = is_.loc["Net Income", prev_year]
-        prev_operating_cf = cf.loc["Total Cash From Operating Activities", prev_year]
+        prev_operating_cf = cf.loc["Operating Cash Flow", prev_year]
 
         if net_income > 0: score += 1
         if operating_cf > 0: score += 1
@@ -43,16 +45,20 @@ def get_piotroski_score(ticker):
         if operating_cf > net_income: score += 1
 
         # Leverage, Liquidity, Source of Funds
-        lt_debt = bs.loc.get("Long Term Debt", pd.Series({current_year: 0}))[current_year]
-        prev_lt_debt = bs.loc.get("Long Term Debt", pd.Series({prev_year: 0}))[prev_year]
+        lt_debt = bs.loc["Long Term Debt", current_year] if "Long Term Debt" in bs.index else 0
+        prev_lt_debt = bs.loc["Long Term Debt", prev_year] if "Long Term Debt" in bs.index else 0
         if prev_lt_debt > 0 and lt_debt < prev_lt_debt: score += 1
 
-        curr_ratio = bs.loc["Total Current Assets", current_year] / bs.loc["Total Current Liabilities", current_year]
-        prev_ratio = bs.loc["Total Current Assets", prev_year] / bs.loc["Total Current Liabilities", prev_year]
+        curr_assets = bs.loc["Total Current Assets", current_year] if "Total Current Assets" in bs.index else 0
+        curr_liab = bs.loc["Total Current Liabilities", current_year] if "Total Current Liabilities" in bs.index else 1  # avoid div by 0
+        prev_assets = bs.loc["Total Current Assets", prev_year] if "Total Current Assets" in bs.index else 0
+        prev_liab = bs.loc["Total Current Liabilities", prev_year] if "Total Current Liabilities" in bs.index else 1
+        curr_ratio = curr_assets / curr_liab
+        prev_ratio = prev_assets / prev_liab
         if curr_ratio > prev_ratio: score += 1
 
-        shares_outstanding = bs.loc.get("Ordinary Shares Number", pd.Series({current_year: 0}))[current_year]
-        prev_shares_outstanding = bs.loc.get("Ordinary Shares Number", pd.Series({prev_year: 0}))[prev_year]
+        shares_outstanding = bs.loc["Ordinary Shares Number", current_year] if "Ordinary Shares Number" in bs.index else 0
+        prev_shares_outstanding = bs.loc["Ordinary Shares Number", prev_year] if "Ordinary Shares Number" in bs.index else 0
         if shares_outstanding <= prev_shares_outstanding: score += 1
 
         # Efficiency

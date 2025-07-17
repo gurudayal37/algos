@@ -54,6 +54,13 @@ nifty_50_symbols = [
     "WIPRO.NS", "ZEEL.NS"
 ]
 
+
+nifty_5_symbols = [
+    "ASIANPAINT.NS", "BAJFINANCE.NS", "BRITANNIA.NS", "CIPLA.NS",
+    "EICHERMOT.NS",  "HDFCBANK.NS", "INDHOTEL.NS", "INDIGO.NS", "RELIANCE.NS", 
+    "TITAN.NS", "WIPRO.NS", "ZEEL.NS"
+]
+
 sector_mapping = {
     "Information Technology (IT)": ["HCL", "INFY", "TCS", "TECHM", "WIPRO", "LTIM", "OFSS", "COFORGE",
                                    "PERSISTENT", "ZENSAR", "ECLERX", "INTELLECT", "BSOFT", "CAMS", "CYIENT"],
@@ -102,3 +109,6 @@ def fetch_nifty_list_all():
 
 def fetch_nifty50_list():
     return nifty_50_symbols
+
+def fetch_nifty5_list():
+    return nifty_5_symbols

@@ -1,13 +1,17 @@
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import yfinance as yf
 import pandas as pd
 from datetime import datetime, timedelta
 
-from data.Index import fetch_nifty500_list
+from data.Index import fetch_nifty500_list, fetch_nifty_list_all
 from data.Sectors import sector_mapping
+from utils.helper import get_piotroski_score
 
 
 # Define a function to get historical data and check for new all-time highs
-def check_new_all_time_high(ticker, period='7y'):
+def check_new_all_time_high(ticker, period='10y'):
     # Fetch historical market data
     data = yf.download(ticker, period=period, interval='1mo' , progress=False)
 
@@ -27,7 +31,7 @@ def check_new_all_time_high(ticker, period='7y'):
         previous_ath_date = previous_all_time_high_date.to_pydatetime()
     else:
         previous_ath_date = pd.to_datetime(previous_all_time_high_date)
-    three_months_ago = datetime.now() - pd.DateOffset(months=3)
+    three_months_ago = datetime.now() - pd.DateOffset(months=2)
     if previous_ath_date > three_months_ago:
         return False, None
 
@@ -43,7 +47,7 @@ def check_new_all_time_high(ticker, period='7y'):
 
 def main():
     # Get a list of Nifty 500 tickers (these are just examples; you'll need to get the full list)
-    nifty500_tickers = fetch_nifty500_list()
+    nifty500_tickers = fetch_nifty_list_all()
 
     # Store stocks that have broken their all-time high
     new_highs = []
@@ -53,6 +57,7 @@ def main():
     for ticker in nifty500_tickers:
         try:
             is_new_high, high_date = check_new_all_time_high(ticker)
+            
             if is_new_high:
                 sector = sector_mapping.get(ticker, "Unknown")
                 if sector not in groupByTickers:
@@ -69,6 +74,11 @@ def main():
         print(f"Sector: {sector}")
         for ticker, high_date in tickers:
             print(f"  {ticker}: {high_date}")
+            piotroski_score = get_piotroski_score(ticker)
+            if piotroski_score is not None:
+                print(f"{ticker}: Piotroski Score = {piotroski_score}/9")
+            else:
+                print(f"{ticker}: Piotroski Score = Not available")
 
 
 if __name__ == "__main__":
