@@ -151,4 +151,10 @@ sheets/*.xls
 
 # Keep strategies folder
 !strategies/
-!strategies/** 
+!strategies/**
+
+# Configuration files with credentials (DO NOT COMMIT)
+config_local.py
+*.env
+secrets.py
+credentials.py 

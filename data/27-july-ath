@@ -1,0 +1,40 @@
+Stocks hitting new all-time highs grouped by sector:
+Sector: Banking & Financial Services (BFSI)
+  ANANDRATHI.NS: 2025-07-01 00:00:00
+ANANDRATHI.NS: Piotroski Score = 5/9
+  ICICIBANK.NS: 2025-07-01 00:00:00
+Error calculating Piotroski Score for ICICIBANK.NS: 'Gross Profit'
+ICICIBANK.NS: Piotroski Score = Not available
+  JMFINANCIL.NS: 2025-07-01 00:00:00
+Error calculating Piotroski Score for JMFINANCIL.NS: 'Gross Profit'
+JMFINANCIL.NS: Piotroski Score = Not available
+Sector: Consumer Durables
+  ASAHIINDIA.NS: 2025-07-01 00:00:00
+ASAHIINDIA.NS: Piotroski Score = 6/9
+Sector: Power & Utilities
+  GVT&D.NS: 2025-07-01 00:00:00
+GVT&D.NS: Piotroski Score = 7/9
+Sector: Pharmaceuticals & Healthcare
+  GLENMARK.NS: 2025-07-01 00:00:00
+GLENMARK.NS: Piotroski Score = 5/9
+  KIMS.NS: 2025-07-01 00:00:00
+KIMS.NS: Piotroski Score = 6/9
+  TORNTPHARM.NS: 2025-07-01 00:00:00
+TORNTPHARM.NS: Piotroski Score = 8/9
+Sector: Automobiles
+  M&M.NS: 2025-07-01 00:00:00
+M&M.NS: Piotroski Score = 4/9
+Sector: Metals & Mining
+  SHYAMMETL.NS: 2025-07-01 00:00:00
+SHYAMMETL.NS: Piotroski Score = 6/9
+Sector: Capital Goods
+  SYRMA.NS: 2025-07-01 00:00:00
+SYRMA.NS: Piotroski Score = 7/9
+Sector: Cement & Building Materials
+  RAMCOCEM.NS: 2025-07-01 00:00:00
+RAMCOCEM.NS: Piotroski Score = 7/9
+Sector: Unknown
+  CUPID.BO: 2025-07-01 00:00:00
+CUPID.BO: Piotroski Score = 3/9
+  SMLISUZU.NS: 2025-07-01 00:00:00
+SMLISUZU.NS: Piotroski Score = 7/9
