@@ -158,27 +158,38 @@ class DateRangeScreenerScraper:
                     if company_data['market_cap'] >= 100000000000:  # 1000 Cr = 100,000,000,000
                         # Try to get announcement time from NSE
                         if company_data['announcement_time'] == '':
+                            logger.info(f"🔍 Fetching announcement time for {company_data['name']}...")
                             nse_time = self.get_announcement_time_from_nse(company_data['name'])
                             if nse_time:
                                 company_data['announcement_time'] = nse_time
-                                logger.debug(f"📅 Found NSE announcement time for {company_data['name']}: {nse_time}")
+                                logger.info(f"📅 Found NSE announcement time for {company_data['name']}: {nse_time}")
+                            else:
+                                logger.info(f"❌ No announcement time found for {company_data['name']}")
                         
                         # Get Piotroski score
+                        logger.info(f"🔍 Fetching Piotroski score for {company_data['name']}...")
                         piotroski_score = self.get_piotroski_score_for_company(company_data['name'])
                         if piotroski_score is not None:
                             company_data['piotroski_score'] = piotroski_score
-                            logger.debug(f"📊 Found Piotroski score for {company_data['name']}: {piotroski_score}/9")
+                            logger.info(f"📊 Found Piotroski score for {company_data['name']}: {piotroski_score}/9")
+                        else:
+                            logger.info(f"❌ No Piotroski score found for {company_data['name']}")
                         
                         # Get shareholding pattern
                         company_symbol = self._get_company_symbol(company_data['name'])
                         if company_symbol:
+                            logger.info(f"🔍 Fetching shareholding pattern for {company_data['name']} (symbol: {company_symbol})...")
                             shareholding_pattern = self.get_shareholding_pattern(company_symbol)
                             if shareholding_pattern:
                                 company_data['shareholding_pattern'] = shareholding_pattern
-                                logger.debug(f"📈 Found shareholding pattern for {company_data['name']}")
+                                logger.info(f"📈 Found shareholding pattern for {company_data['name']}")
+                            else:
+                                logger.info(f"❌ No shareholding pattern found for {company_data['name']}")
+                        else:
+                            logger.info(f"❌ No symbol found for {company_data['name']}")
                         
                         companies.append(company_data)
-                        logger.debug(f"✅ Included {company_data['name']} - Market Cap: ₹{company_data['market_cap']/10000000:.1f} Cr")
+                        logger.info(f"✅ Included {company_data['name']} - Market Cap: ₹{company_data['market_cap']/10000000:.1f} Cr")
                     else:
                         logger.debug(f"❌ Filtered out {company_data['name']} - Market Cap: ₹{company_data['market_cap']/10000000:.1f} Cr")
             
@@ -611,6 +622,41 @@ class DateRangeScreenerScraper:
             'National Perox.': 'NATPEROX',
             'Quadrant Future': 'QUADRANT',
             'D.P. Abhushan': 'DPABHUSHAN',
+            # Adding symbols for July 10, 2025 companies
+            'TCS': 'TCS',
+            'Tata Elxsi': 'TATAELXSI',
+            'Anand Rathi Wea.': 'ANANDRATHI',
+            'Indian Renewable': 'IREDA',
+            # Adding symbols for July 30, 2025 companies
+            'Hitachi Energy': 'HITACHI',
+            'Sagility India': 'SAGILITY',
+            'HEG': 'HEG',
+            'Birla Corpn.': 'BIRLACORPN',
+            'Navin Fluo.Intl.': 'NAVINFLUOR',
+            'P & G Hygiene': 'PGHH',
+            'Altius Telecom': 'ALTIUSTEL',
+            'Kaynes Tech': 'KAYNES',
+            'Tata Steel': 'TATASTEEL',
+            'CESC': 'CESC',
+            'Indraprastha Gas': 'IGL',
+            'Zydus Wellness': 'ZYDUSWELL',
+            'Interglobe Aviat': 'INDIGO',
+            'Asahi India Glas': 'ASAHIINDIA',
+            'Hyundai Motor I': 'HYUNDAI',
+            'Punjab Natl.Bank': 'PNB',
+            'JP Power Ven.': 'JPPOWER',
+            'Cube Highways': 'CUBEINVEST',
+            'BASF India': 'BASF',
+            'Welspun Living': 'WELSPUNLIV',
+            'JBM Auto': 'JBMAUTO',
+            'Power Grid Corpn': 'POWERGRID',
+            'BASF India': 'BASF',
+            'KPIT Technologi.': 'KPITTECH',
+            'Firstsour.Solu.': 'FSL',
+            'Vedant Fashions': 'VEDANTFASH',
+            'Indus Towers': 'INDUSTOWER',
+            'Cube Highways': 'CUBEINVEST',
+            'Altius Telecom': 'ALTIUSTEL',
         }
         
         # Try exact match first
@@ -704,6 +750,38 @@ class DateRangeScreenerScraper:
                 'National Perox.': 'NATPEROX.NS',
                 'Quadrant Future': 'QUADRANT.NS',
                 'D.P. Abhushan': 'DPABHUSHAN.NS',
+                # Adding tickers for July 10, 2025 companies
+                'TCS': 'TCS.NS',
+                'Tata Elxsi': 'TATAELXSI.NS',
+                'Anand Rathi Wea.': 'ANANDRATHI.NS',
+                'Indian Renewable': 'IREDA.NS',
+                # Adding tickers for July 30, 2025 companies
+                'Hitachi Energy': 'HITACHI.NS',
+                'Sagility India': 'SAGILITY.NS',
+                'HEG': 'HEG.NS',
+                'Birla Corpn.': 'BIRLACORPN.NS',
+                'Navin Fluo.Intl.': 'NAVINFLUOR.NS',
+                'P & G Hygiene': 'PGHH.NS',
+                'Altius Telecom': 'ALTIUSTEL.NS',
+                'Kaynes Tech': 'KAYNES.NS',
+                'Tata Steel': 'TATASTEEL.NS',
+                'CESC': 'CESC.NS',
+                'Indraprastha Gas': 'IGL.NS',
+                'Zydus Wellness': 'ZYDUSWELL.NS',
+                'Interglobe Aviat': 'INDIGO.NS',
+                'Asahi India Glas': 'ASAHIINDIA.NS',
+                'Hyundai Motor I': 'HYUNDAI.NS',
+                'Punjab Natl.Bank': 'PNB.NS',
+                'JP Power Ven.': 'JPPOWER.NS',
+                'Cube Highways': 'CUBEINVEST.NS',
+                'BASF India': 'BASF.NS',
+                'Welspun Living': 'WELSPUNLIV.NS',
+                'JBM Auto': 'JBMAUTO.NS',
+                'Power Grid Corpn': 'POWERGRID.NS',
+                'KPIT Technologi.': 'KPITTECH.NS',
+                'Firstsour.Solu.': 'FSL.NS',
+                'Vedant Fashions': 'VEDANTFASH.NS',
+                'Indus Towers': 'INDUSTOWER.NS',
             }
             
             ticker = ticker_mapping.get(company_name)
@@ -850,6 +928,19 @@ class DateRangeScreenerScraper:
                 
                 print(f"\n📊 Final filtering results:")
                 print(f"   Companies with market cap >= 1000 Cr: {len(df)}")
+                
+                # Debug: Check what data we have
+                if 'announcement_time' in df.columns:
+                    companies_with_time = df[df['announcement_time'].notna() & (df['announcement_time'] != '')]
+                    print(f"   Companies with announcement time: {len(companies_with_time)}")
+                
+                if 'piotroski_score' in df.columns:
+                    companies_with_piotroski = df[df['piotroski_score'].notna()]
+                    print(f"   Companies with Piotroski score: {len(companies_with_piotroski)}")
+                
+                if 'shareholding_pattern' in df.columns:
+                    companies_with_shareholding = df[df['shareholding_pattern'].apply(lambda x: x != {} and x is not None)]
+                    print(f"   Companies with shareholding pattern: {len(companies_with_shareholding)}")
             
             return df
             
@@ -858,7 +949,7 @@ class DateRangeScreenerScraper:
             return pd.DataFrame()
     
     def analyze_results(self, df: pd.DataFrame) -> Tuple[pd.DataFrame, pd.DataFrame]:
-        """Analyze results and find top 5 best and worst performing companies"""
+        """Analyze results and find top 10 best and worst performing companies"""
         if df.empty:
             logger.warning("No data to analyze")
             return pd.DataFrame(), pd.DataFrame()
@@ -870,7 +961,7 @@ class DateRangeScreenerScraper:
             logger.warning("No companies with market cap >= 1000 Cr found")
             return pd.DataFrame(), pd.DataFrame()
         
-        # Create composite score
+        # Create composite score using configurable weights
         df_filtered['composite_score'] = (
             df_filtered['sales_growth'].fillna(0) * COMPOSITE_SCORE_WEIGHTS['sales_growth'] + 
             df_filtered['ebidt_growth'].fillna(0) * COMPOSITE_SCORE_WEIGHTS['ebidt_growth'] + 
@@ -888,13 +979,25 @@ class DateRangeScreenerScraper:
         # Sort by composite score
         df_sorted = df_with_growth.sort_values('composite_score', ascending=False)
         
-        # Get top 5 best and worst
-        top_5_best = df_sorted.head(5)
-        top_5_worst = df_sorted.tail(5)
+        # Get top 10 best and worst
+        top_10_best = df_sorted.head(10)
+        top_10_worst = df_sorted.tail(10)
         
-        return top_5_best, top_5_worst
+        return top_10_best, top_10_worst
     
-    def print_analysis(self, top_5_best: pd.DataFrame, top_5_worst: pd.DataFrame):
+    def print_composite_score_weights(self):
+        """Print the current composite score weights being used"""
+        print("\n📊 COMPOSITE SCORE WEIGHTS (from config.py):")
+        print("-" * 50)
+        total_weight = 0
+        for metric, weight in COMPOSITE_SCORE_WEIGHTS.items():
+            percentage = weight * 100
+            total_weight += weight
+            print(f"  {metric.replace('_', ' ').title()}: {percentage:.1f}%")
+        print(f"  Total Weight: {total_weight * 100:.1f}%")
+        print("-" * 50)
+    
+    def print_analysis(self, top_10_best: pd.DataFrame, top_10_worst: pd.DataFrame):
         """Print analysis results"""
         print("\n" + "="*100)
         print("QUARTERLY RESULTS ANALYSIS (Market Cap >= 1000 Cr)")
@@ -904,10 +1007,17 @@ class DateRangeScreenerScraper:
         print("   📄 PDF links contain detailed announcement information")
         print("="*100)
         
-        if not top_5_best.empty:
-            print(f"\n🏆 TOP 5 COMPANIES WITH GREAT RESULTS ({len(top_5_best)} companies):")
+        # Show composite score weights used
+        print("\n📊 Composite Score Weights Used:")
+        for metric, weight in COMPOSITE_SCORE_WEIGHTS.items():
+            percentage = weight * 100
+            print(f"   {metric.replace('_', ' ').title()}: {percentage:.1f}%")
+        print("="*100)
+        
+        if not top_10_best.empty:
+            print(f"\n🏆 TOP 10 COMPANIES WITH GREAT RESULTS ({len(top_10_best)} companies):")
             print("-" * 70)
-            for idx, row in top_5_best.iterrows():
+            for idx, row in top_10_best.iterrows():
                 print(f"{row['name']} ({row['result_date']})")
                 print(f"  Sales Growth: {row['sales_growth']:+.1f}% | "
                       f"EBIDT Growth: {row['ebidt_growth']:+.1f}% | "
@@ -932,26 +1042,47 @@ class DateRangeScreenerScraper:
                 # Add shareholding pattern for last 5 quarters if available
                 if 'shareholding_pattern' in row and row['shareholding_pattern']:
                     shareholding = row['shareholding_pattern']
-                    if 'Promoters +' in shareholding:
-                        print(f"  📈 Shareholding Pattern (Last 5 Quarters):")
-                        quarters = list(shareholding['Promoters +'].keys())
+                    print(f"  📈 Shareholding Pattern (Last 5 Quarters):")
+                    
+                    # Try different possible key formats
+                    promoter_keys = ['Promoters+', 'Promoters +', 'Promoters', 'Promoter Holding']
+                    fii_keys = ['FIIs+', 'FIIs +', 'FIIs', 'FII Holding']
+                    dii_keys = ['DIIs+', 'DIIs +', 'DIIs', 'DII Holding']
+                    public_keys = ['Public+', 'Public +', 'Public', 'Public Holding']
+                    
+                    # Find the actual keys used
+                    promoter_key = next((k for k in promoter_keys if k in shareholding), None)
+                    fii_key = next((k for k in fii_keys if k in shareholding), None)
+                    dii_key = next((k for k in dii_keys if k in shareholding), None)
+                    public_key = next((k for k in public_keys if k in shareholding), None)
+                    
+                    if promoter_key:
+                        quarters = list(shareholding[promoter_key].keys())
                         last_5_quarters = quarters[-5:] if len(quarters) >= 5 else quarters
                         
                         for quarter in last_5_quarters:
-                            promoters = shareholding['Promoters +'].get(quarter, 'N/A')
-                            fiis = shareholding.get('FIIs +', {}).get(quarter, 'N/A')
-                            diis = shareholding.get('DIIs +', {}).get(quarter, 'N/A')
-                            public = shareholding.get('Public +', {}).get(quarter, 'N/A')
+                            promoters = shareholding[promoter_key].get(quarter, 'N/A')
+                            fiis = shareholding.get(fii_key, {}).get(quarter, 'N/A') if fii_key else 'N/A'
+                            diis = shareholding.get(dii_key, {}).get(quarter, 'N/A') if dii_key else 'N/A'
+                            public = shareholding.get(public_key, {}).get(quarter, 'N/A') if public_key else 'N/A'
                             print(f"    {quarter}: Promoters {promoters} | FIIs {fiis} | DIIs {diis} | Public {public}")
+                    else:
+                        print(f"    No promoter data found. Available keys: {list(shareholding.keys())}")
+                        # Try to show whatever data is available
+                        for key, value in shareholding.items():
+                            if isinstance(value, dict):
+                                print(f"    {key}: {value}")
+                            else:
+                                print(f"    {key}: {value}")
                 
                 if row['price'] > 0:
                     print(f"  Price: ₹{row['price']:.2f} | Market Cap: ₹{row['market_cap']/10000000:.1f} Cr")
                 print()
         
-        if not top_5_worst.empty:
-            print(f"\n📉 TOP 5 COMPANIES WITH POOR RESULTS ({len(top_5_worst)} companies):")
+        if not top_10_worst.empty:
+            print(f"\n📉 TOP 10 COMPANIES WITH POOR RESULTS ({len(top_10_worst)} companies):")
             print("-" * 70)
-            for idx, row in top_5_worst.iterrows():
+            for idx, row in top_10_worst.iterrows():
                 print(f"{row['name']} ({row['result_date']})")
                 print(f"  Sales Growth: {row['sales_growth']:+.1f}% | "
                       f"EBIDT Growth: {row['ebidt_growth']:+.1f}% | "
@@ -976,17 +1107,38 @@ class DateRangeScreenerScraper:
                 # Add shareholding pattern for last 5 quarters if available
                 if 'shareholding_pattern' in row and row['shareholding_pattern']:
                     shareholding = row['shareholding_pattern']
-                    if 'Promoters +' in shareholding:
-                        print(f"  📈 Shareholding Pattern (Last 5 Quarters):")
-                        quarters = list(shareholding['Promoters +'].keys())
+                    print(f"  📈 Shareholding Pattern (Last 5 Quarters):")
+                    
+                    # Try different possible key formats
+                    promoter_keys = ['Promoters+', 'Promoters +', 'Promoters', 'Promoter Holding']
+                    fii_keys = ['FIIs+', 'FIIs +', 'FIIs', 'FII Holding']
+                    dii_keys = ['DIIs+', 'DIIs +', 'DIIs', 'DII Holding']
+                    public_keys = ['Public+', 'Public +', 'Public', 'Public Holding']
+                    
+                    # Find the actual keys used
+                    promoter_key = next((k for k in promoter_keys if k in shareholding), None)
+                    fii_key = next((k for k in fii_keys if k in shareholding), None)
+                    dii_key = next((k for k in dii_keys if k in shareholding), None)
+                    public_key = next((k for k in public_keys if k in shareholding), None)
+                    
+                    if promoter_key:
+                        quarters = list(shareholding[promoter_key].keys())
                         last_5_quarters = quarters[-5:] if len(quarters) >= 5 else quarters
                         
                         for quarter in last_5_quarters:
-                            promoters = shareholding['Promoters +'].get(quarter, 'N/A')
-                            fiis = shareholding.get('FIIs +', {}).get(quarter, 'N/A')
-                            diis = shareholding.get('DIIs +', {}).get(quarter, 'N/A')
-                            public = shareholding.get('Public +', {}).get(quarter, 'N/A')
+                            promoters = shareholding[promoter_key].get(quarter, 'N/A')
+                            fiis = shareholding.get(fii_key, {}).get(quarter, 'N/A') if fii_key else 'N/A'
+                            diis = shareholding.get(dii_key, {}).get(quarter, 'N/A') if dii_key else 'N/A'
+                            public = shareholding.get(public_key, {}).get(quarter, 'N/A') if public_key else 'N/A'
                             print(f"    {quarter}: Promoters {promoters} | FIIs {fiis} | DIIs {diis} | Public {public}")
+                    else:
+                        print(f"    No promoter data found. Available keys: {list(shareholding.keys())}")
+                        # Try to show whatever data is available
+                        for key, value in shareholding.items():
+                            if isinstance(value, dict):
+                                print(f"    {key}: {value}")
+                            else:
+                                print(f"    {key}: {value}")
                 
                 if row['price'] > 0:
                     print(f"  Price: ₹{row['price']:.2f} | Market Cap: ₹{row['market_cap']/10000000:.1f} Cr")
@@ -1026,6 +1178,9 @@ def main():
     scraper = DateRangeScreenerScraper()
     
     print(f"\n👤 Using credentials for: {SCREENER_EMAIL}")
+    
+    # Display composite score weights
+    scraper.print_composite_score_weights()
     
     # Ask user for date range
     print("\n📅 Enter date range to scrape:")
@@ -1086,10 +1241,10 @@ def main():
         
         # Analyze results
         print("\n📈 Analyzing results...")
-        top_5_best, top_5_worst = scraper.analyze_results(df)
+        top_10_best, top_10_worst = scraper.analyze_results(df)
         
         # Print analysis
-        scraper.print_analysis(top_5_best, top_5_worst)
+        scraper.print_analysis(top_10_best, top_10_worst)
         
         # Save to CSV
         output_file = os.path.join(OUTPUT_DIR, f"date_range_screener_results_{start_date}_to_{end_date}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv")

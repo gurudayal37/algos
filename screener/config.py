@@ -15,12 +15,12 @@ DEFAULT_END_DATE = "2025-07-28"
 
 # Analysis Configuration
 COMPOSITE_SCORE_WEIGHTS = {
-    'sales_growth': 0.25,
-    'ebidt_growth': 0.25,
-    'net_profit_growth': 0.3,
-    'eps_growth': 0.2
+    'sales_growth': 0.45,
+    'ebidt_growth': 0.20,
+    'net_profit_growth': 0.20,
+    'eps_growth': 0.15
 }
 
 # Output Configuration
 OUTPUT_DIR = "output"
-DEBUG_MODE = True  # Set to False to disable debug HTML files 
+DEBUG_MODE = False  # Set to True to enable debug HTML files 
